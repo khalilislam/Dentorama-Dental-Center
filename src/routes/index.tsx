@@ -383,7 +383,7 @@ function HomePage() {
                 Ready to give your smile the care it deserves?
               </h2>
               <p className="mt-4 opacity-90 max-w-xl mx-auto">Book a consultation today and meet the team that puts your comfort first.</p>
-              <Link to="/contact" className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary-foreground pl-6 pr-2 py-2.5 text-sm font-semibold text-primary shadow-md hover:scale-105 transition-transform">
+              <Link to="/contact" className="cta-animated mt-8 inline-flex items-center gap-2 rounded-full bg-primary-foreground pl-6 pr-2 py-2.5 text-sm font-semibold text-primary shadow-md">
                 Book Appointment
                 <span className="grid h-9 w-9 place-items-center rounded-full bg-primary text-primary-foreground"><ArrowUpRight className="h-4 w-4" /></span>
               </Link>
