@@ -5,9 +5,37 @@ import {
   Stethoscope, Award, Users, CheckCircle2, Quote, Compass,
 } from "lucide-react";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/Reveal";
+import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import heroDentists from "@/assets/hero-dentists.png";
 import about1Img from "@/assets/clinic-memmeri.png";
 import about2Img from "@/assets/clinic-tamendjari.png";
+import ba1Before from "@/assets/ba-1-before.jpg";
+import ba1After from "@/assets/ba-1-after.jpg";
+import ba2Before from "@/assets/ba-2-before.jpg";
+import ba2After from "@/assets/ba-2-after.jpg";
+import ba3Before from "@/assets/ba-3-before.jpg";
+import ba3After from "@/assets/ba-3-after.jpg";
+
+const beforeAfterCases = [
+  {
+    before: ba1Before,
+    after: ba1After,
+    title: "Réhabilitation prothétique complète",
+    desc: "Restauration d'un sourire affecté par la perte et la dégradation des dents antérieures grâce à une prothèse fixe esthétique, redonnant fonction, harmonie et confiance au patient.",
+  },
+  {
+    before: ba2Before,
+    after: ba2After,
+    title: "Soins conservateurs & couronnes esthétiques",
+    desc: "Traitement des caries multiples et reconstruction des dents abîmées avec des couronnes céramiques sur mesure pour un sourire naturel, propre et lumineux.",
+  },
+  {
+    before: ba3Before,
+    after: ba3After,
+    title: "Bridge dentaire & restauration du sourire",
+    desc: "Remplacement des dents manquantes et retrait des restaurations métalliques par un bridge moderne, offrant un alignement parfait et un résultat esthétique durable.",
+  },
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
