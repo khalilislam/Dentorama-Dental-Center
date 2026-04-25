@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, Award, HeartPulse, Smile, Users, CheckCircle2 } from "lucide-react";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/Reveal";
+import drMemmeri from "@/assets/dr-memmeri.png";
+import drTamendjari from "@/assets/dr-tamendjari.png";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -16,8 +18,8 @@ export const Route = createFileRoute("/about")({
 });
 
 const team = [
-  { name: "Dr. Memmeri", role: "Co-Founder · Dentiste", img: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&q=80" },
-  { name: "Dr. Tamendjari", role: "Co-Founder · Dentiste", img: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&q=80" },
+  { name: "Dr. Memmeri", role: "Co-Founder · Dentiste", img: drMemmeri },
+  { name: "Dr. Tamendjari", role: "Co-Founder · Dentiste", img: drTamendjari },
 ];
 
 function AboutPage() {
