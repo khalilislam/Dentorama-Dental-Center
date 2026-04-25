@@ -197,3 +197,59 @@
 @utility animate-spin-slow {
   animation: spin-slow 18s linear infinite;
 }
+
+/* CTA animations */
+@keyframes cta-pulse-glow {
+  0%, 100% { box-shadow: 0 10px 40px -10px oklch(0.62 0.16 235 / 0.35), 0 0 0 0 oklch(0.62 0.16 235 / 0.45); }
+  50% { box-shadow: 0 14px 50px -10px oklch(0.62 0.16 235 / 0.55), 0 0 0 10px oklch(0.62 0.16 235 / 0); }
+}
+@keyframes cta-shimmer {
+  0% { transform: translateX(-150%) skewX(-20deg); }
+  100% { transform: translateX(250%) skewX(-20deg); }
+}
+
+@utility cta-animated {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease, letter-spacing 0.3s ease;
+  animation: cta-pulse-glow 2.8s ease-in-out infinite;
+  will-change: transform;
+
+  &:hover {
+    transform: translateY(-3px) scale(1.04);
+    letter-spacing: 0.02em;
+    animation-play-state: paused;
+  }
+
+  &:active {
+    transform: translateY(-1px) scale(1.01);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, oklch(1 0 0 / 0.35), transparent);
+    transform: translateX(-150%) skewX(-20deg);
+    pointer-events: none;
+  }
+
+  &:hover::before {
+    animation: cta-shimmer 0.9s ease-out;
+  }
+
+  & svg {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover svg {
+    transform: translateX(4px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta-animated { animation: none; }
+  .cta-animated:hover { transform: none; }
+  .cta-animated::before { display: none; }
+}
+
