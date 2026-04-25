@@ -52,9 +52,9 @@ export function Footer() {
         <div>
           <h4 className="text-base font-semibold mb-4">Get In Touch</h4>
           <ul className="space-y-3 text-sm text-dark-section-foreground/70">
-            <li className="flex gap-3"><Phone className="h-4 w-4 mt-0.5 text-accent shrink-0" /> +(91) 8826-200939</li>
-            <li className="flex gap-3"><Mail className="h-4 w-4 mt-0.5 text-accent shrink-0" /> hello@dentorama.com</li>
-            <li className="flex gap-3"><MapPin className="h-4 w-4 mt-0.5 text-accent shrink-0" /> 24 Wellness Avenue, New Delhi</li>
+            <li className="flex gap-3"><Phone className="h-4 w-4 mt-0.5 text-accent shrink-0" /><span>+(91) 8826-200939</span></li>
+            <li className="flex gap-3"><Mail className="h-4 w-4 mt-0.5 text-accent shrink-0" /><span>hello@dentorama.com</span></li>
+            <li className="flex gap-3"><MapPin className="h-4 w-4 mt-0.5 text-accent shrink-0" /><span>24 Wellness Avenue, New Delhi</span></li>
           </ul>
         </div>
       </div>
