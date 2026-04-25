@@ -193,7 +193,7 @@ function HomePage() {
                 <p className="text-sm text-dark-section-foreground/70">Sam–Jeu 9h–22h · Ven 14h–20h</p>
               </div>
             </div>
-            <Link to="/contact" className="justify-self-start lg:justify-self-end inline-flex items-center gap-2 rounded-full bg-gradient-primary pl-5 pr-2 py-2 text-sm font-semibold shadow-soft hover:scale-105 transition-transform">
+            <Link to="/contact" className="cta-animated justify-self-start lg:justify-self-end inline-flex items-center gap-2 rounded-full bg-gradient-primary pl-5 pr-2 py-2 text-sm font-semibold shadow-soft">
               Make An Appointment
               <span className="grid h-8 w-8 place-items-center rounded-full bg-primary-foreground text-primary"><ArrowUpRight className="h-4 w-4" /></span>
             </Link>
