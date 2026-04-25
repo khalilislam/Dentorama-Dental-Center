@@ -15,6 +15,7 @@ import ba2Before from "@/assets/ba-2-before.jpg";
 import ba2After from "@/assets/ba-2-after.jpg";
 import ba3Before from "@/assets/ba-3-before.jpg";
 import ba3After from "@/assets/ba-3-after.jpg";
+import doctorImg from "@/assets/doctor-portrait.png";
 
 const beforeAfterCases = [
   {
@@ -53,7 +54,7 @@ export const Route = createFileRoute("/")({
 const HERO = heroDentists;
 const ABOUT1 = about1Img;
 const ABOUT2 = about2Img;
-const DOCTOR = "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=200&q=80";
+const DOCTOR = doctorImg;
 
 const services = [
   { icon: Smile, title: "Teeth Whitening", desc: "Brighten your smile by several shades in a single visit." },
@@ -166,7 +167,7 @@ function HomePage() {
               initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 1 }}
               className="absolute -bottom-6 left-4 flex items-center gap-3 rounded-2xl bg-card px-4 py-3 shadow-card"
             >
-              <img src={DOCTOR} alt="Dr. Memmeri" className="h-12 w-12 rounded-full object-cover" />
+              <img src={DOCTOR} alt="Dr. Memmeri" className="h-12 w-12 rounded-full object-cover border border-slate-50" />
               <div>
                 <p className="text-sm font-bold">Dr. Memmeri & Dr. Tamendjari</p>
                 <p className="text-xs text-muted-foreground">Founders</p>
