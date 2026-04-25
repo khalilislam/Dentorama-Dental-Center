@@ -54,7 +54,7 @@ export const Route = createFileRoute("/")({
 const HERO = heroDentists;
 const ABOUT1 = about1Img;
 const ABOUT2 = about2Img;
-const DOCTOR = "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=200&q=80";
+const DOCTOR = doctorImg;
 
 const services = [
   { icon: Smile, title: "Teeth Whitening", desc: "Brighten your smile by several shades in a single visit." },
