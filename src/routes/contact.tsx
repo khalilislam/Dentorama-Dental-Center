@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, Clock, ArrowUpRight, CheckCircle2 } from "lucide-react";
+import { Phone, MapPin, Clock, ArrowUpRight, CheckCircle2, Instagram, Facebook } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 
 export const Route = createFileRoute("/contact")({
@@ -41,18 +41,18 @@ function ContactPage() {
       <section className="py-24">
         <div className="mx-auto max-w-7xl px-5 lg:px-8 grid lg:grid-cols-3 gap-6">
           {[
-            { icon: Phone, t: "Phone", d: "+(91) 8826-200939" },
-            { icon: Mail, t: "Email", d: "hello@dentorama.com" },
-            { icon: MapPin, t: "Location", d: "24 Wellness Avenue, New Delhi" },
+            { icon: Phone, t: "Phone", d: "06 72 68 09 13", href: "tel:0672680913" },
+            { icon: Instagram, t: "Instagram", d: "@dentorama_dental_center", href: "https://www.instagram.com/dentorama_dental_center" },
+            { icon: Facebook, t: "Facebook", d: "Dentorama Dental Center", href: "https://www.facebook.com/profile.php?id=61555264380391" },
           ].map((c, i) => (
             <Reveal key={c.t} delay={i * 0.1}>
-              <div className="rounded-3xl bg-card p-7 shadow-card border border-border/50 h-full">
+              <a href={c.href} target={c.href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer" className="block rounded-3xl bg-card p-7 shadow-card border border-border/50 h-full hover:border-primary/40 transition-colors">
                 <div className="grid h-12 w-12 place-items-center rounded-2xl bg-gradient-primary text-primary-foreground">
                   <c.icon className="h-6 w-6" />
                 </div>
                 <h3 className="mt-5 font-bold">{c.t}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">{c.d}</p>
-              </div>
+              </a>
             </Reveal>
           ))}
         </div>
@@ -90,12 +90,21 @@ function ContactPage() {
           </Reveal>
 
           <Reveal delay={0.15}>
-            <div className="rounded-3xl overflow-hidden shadow-card border border-border/50">
+            <div className="rounded-3xl overflow-hidden shadow-card border border-border/50 relative">
               <iframe
-                title="Map"
+                title="Dentorama location"
                 className="w-full h-80"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=77.20%2C28.60%2C77.25%2C28.65&layer=mapnik"
+                loading="lazy"
+                src="https://maps.google.com/maps?q=Dentorama%20Dental%20Center&t=&z=15&ie=UTF8&iwloc=&output=embed"
               />
+              <a
+                href="https://maps.app.goo.gl/hmKmPkoucFCkG5Tq5"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute bottom-4 right-4 inline-flex items-center gap-2 rounded-full bg-card px-4 py-2 text-xs font-semibold shadow-card hover:bg-primary hover:text-primary-foreground transition-colors"
+              >
+                <MapPin className="h-3.5 w-3.5" /> Open in Google Maps
+              </a>
             </div>
             <div className="mt-6 rounded-3xl bg-dark-section text-dark-section-foreground p-7">
               <div className="flex items-center gap-3">
@@ -103,9 +112,8 @@ function ContactPage() {
                 <h3 className="font-bold">Opening Hours</h3>
               </div>
               <ul className="mt-5 space-y-2 text-sm text-dark-section-foreground/80">
-                <li className="flex justify-between border-b border-white/10 pb-2"><span>Mon – Fri</span><span>9:00 AM – 9:00 PM</span></li>
-                <li className="flex justify-between border-b border-white/10 pb-2"><span>Saturday</span><span>9:00 AM – 9:00 PM</span></li>
-                <li className="flex justify-between"><span>Sunday</span><span>Closed</span></li>
+                <li className="flex justify-between border-b border-white/10 pb-2"><span>Samedi – Jeudi</span><span>09h:00 – 22h:00</span></li>
+                <li className="flex justify-between"><span>Vendredi</span><span>14h:00 – 20h:00</span></li>
               </ul>
             </div>
           </Reveal>

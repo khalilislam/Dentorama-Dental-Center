@@ -16,10 +16,8 @@ export const Route = createFileRoute("/about")({
 });
 
 const team = [
-  { name: "Dr. Priya Jain", role: "Lead Dentist", img: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&q=80" },
-  { name: "Dr. Arjun Kapoor", role: "Orthodontist", img: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&q=80" },
-  { name: "Dr. Neha Verma", role: "Pediatric Dentist", img: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&q=80" },
-  { name: "Dr. Vikram Rao", role: "Implant Specialist", img: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&q=80" },
+  { name: "Dr. Memmeri", role: "Co-Founder · Dentiste", img: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&q=80" },
+  { name: "Dr. Tamendjari", role: "Co-Founder · Dentiste", img: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&q=80" },
 ];
 
 function AboutPage() {
@@ -97,7 +95,7 @@ function AboutPage() {
             <p className="text-xs uppercase tracking-[0.25em] text-primary font-semibold">Our Team</p>
             <h2 className="mt-3 text-3xl lg:text-4xl font-bold">Meet the specialists</h2>
           </Reveal>
-          <StaggerGroup className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <StaggerGroup className="mt-14 grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {team.map((m) => (
               <StaggerItem key={m.name}>
                 <div className="group">

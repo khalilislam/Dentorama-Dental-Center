@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Sparkles, Phone, Mail, MapPin, Facebook, Instagram, Twitter } from "lucide-react";
+import { Sparkles, Phone, MapPin, Facebook, Instagram } from "lucide-react";
 
 export function Footer() {
   return (
@@ -16,11 +16,12 @@ export function Footer() {
             Premium dental care delivered with a gentle touch. Your smile, our craft.
           </p>
           <div className="mt-5 flex gap-3">
-            {[Facebook, Instagram, Twitter].map((Icon, i) => (
-              <a key={i} href="#" className="grid h-9 w-9 place-items-center rounded-full bg-white/10 hover:bg-primary transition-colors">
-                <Icon className="h-4 w-4" />
-              </a>
-            ))}
+            <a href="https://www.instagram.com/dentorama_dental_center" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="grid h-9 w-9 place-items-center rounded-full bg-white/10 hover:bg-primary transition-colors">
+              <Instagram className="h-4 w-4" />
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61555264380391" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="grid h-9 w-9 place-items-center rounded-full bg-white/10 hover:bg-primary transition-colors">
+              <Facebook className="h-4 w-4" />
+            </a>
           </div>
         </div>
 
@@ -52,9 +53,13 @@ export function Footer() {
         <div>
           <h4 className="text-base font-semibold mb-4">Get In Touch</h4>
           <ul className="space-y-3 text-sm text-dark-section-foreground/70">
-            <li className="flex gap-3"><Phone className="h-4 w-4 mt-0.5 text-accent shrink-0" /><span>+(91) 8826-200939</span></li>
-            <li className="flex gap-3"><Mail className="h-4 w-4 mt-0.5 text-accent shrink-0" /><span>hello@dentorama.com</span></li>
-            <li className="flex gap-3"><MapPin className="h-4 w-4 mt-0.5 text-accent shrink-0" /><span>24 Wellness Avenue, New Delhi</span></li>
+            <li className="flex gap-3"><Phone className="h-4 w-4 mt-0.5 text-accent shrink-0" /><span>06 72 68 09 13</span></li>
+            <li className="flex gap-3"><MapPin className="h-4 w-4 mt-0.5 text-accent shrink-0" /><a href="https://maps.app.goo.gl/hmKmPkoucFCkG5Tq5" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">View on Google Maps</a></li>
+            <li className="pt-2 text-dark-section-foreground/80">
+              <p className="font-semibold text-dark-section-foreground">Hours</p>
+              <p className="mt-1">Sam–Jeu : 09h–22h</p>
+              <p>Vendredi : 14h–20h</p>
+            </li>
           </ul>
         </div>
       </div>

@@ -136,10 +136,10 @@ function HomePage() {
               initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 1 }}
               className="absolute -bottom-6 left-4 flex items-center gap-3 rounded-2xl bg-card px-4 py-3 shadow-card"
             >
-              <img src={DOCTOR} alt="Dr. Priya" className="h-12 w-12 rounded-full object-cover" />
+              <img src={DOCTOR} alt="Dr. Memmeri" className="h-12 w-12 rounded-full object-cover" />
               <div>
-                <p className="text-sm font-bold">Dr. Priya Jain</p>
-                <p className="text-xs text-muted-foreground">Lead Dentist</p>
+                <p className="text-sm font-bold">Dr. Memmeri & Dr. Tamendjari</p>
+                <p className="text-xs text-muted-foreground">Founders</p>
               </div>
             </motion.div>
           </motion.div>
@@ -152,14 +152,14 @@ function HomePage() {
               <span className="grid h-12 w-12 place-items-center rounded-full bg-primary"><Phone className="h-5 w-5" /></span>
               <div>
                 <p className="font-semibold">Need Dental Services?</p>
-                <p className="text-sm text-dark-section-foreground/70">Call: +(91) 8826-200939</p>
+                <p className="text-sm text-dark-section-foreground/70">Call: 06 72 68 09 13</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
               <span className="grid h-12 w-12 place-items-center rounded-full bg-primary"><Clock className="h-5 w-5" /></span>
               <div>
                 <p className="font-semibold">Opening Hours</p>
-                <p className="text-sm text-dark-section-foreground/70">Mon to Sat 9:00 AM - 9:00 PM</p>
+                <p className="text-sm text-dark-section-foreground/70">Sam–Jeu 9h–22h · Ven 14h–20h</p>
               </div>
             </div>
             <Link to="/contact" className="justify-self-start lg:justify-self-end inline-flex items-center gap-2 rounded-full bg-gradient-primary pl-5 pr-2 py-2 text-sm font-semibold shadow-soft hover:scale-105 transition-transform">
