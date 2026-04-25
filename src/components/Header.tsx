@@ -58,7 +58,7 @@ export function Header() {
         <div className="flex items-center gap-3">
           <Link
             to="/contact"
-            className="hidden sm:inline-flex items-center gap-2 rounded-full bg-gradient-primary pl-5 pr-2 py-2 text-sm font-semibold text-primary-foreground shadow-soft hover:scale-105 transition-transform"
+            className="cta-animated hidden sm:inline-flex items-center gap-2 rounded-full bg-gradient-primary pl-5 pr-2 py-2 text-sm font-semibold text-primary-foreground shadow-soft"
           >
             Book Appointment
             <span className="grid h-8 w-8 place-items-center rounded-full bg-primary-foreground text-primary">
