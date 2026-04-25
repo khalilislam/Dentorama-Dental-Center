@@ -16,7 +16,7 @@ import ba2After from "@/assets/ba-2-after.jpg";
 import ba3Before from "@/assets/ba-3-before.jpg";
 import ba3After from "@/assets/ba-3-after.jpg";
 import doctorImg from "@/assets/doctor-portrait.png";
-import toothIcon from "@/assets/tooth-icon.png";
+import toothIcon from "@/assets/icon-hero-tooth.svg";
 
 const beforeAfterCases = [
   {
