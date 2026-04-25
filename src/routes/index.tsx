@@ -6,6 +6,8 @@ import {
 } from "lucide-react";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/Reveal";
 import heroDentists from "@/assets/hero-dentists.png";
+import about1Img from "@/assets/clinic-memmeri.png";
+import about2Img from "@/assets/clinic-tamendjari.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -21,8 +23,8 @@ export const Route = createFileRoute("/")({
 });
 
 const HERO = heroDentists;
-const ABOUT1 = "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=700&q=80";
-const ABOUT2 = "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=700&q=80";
+const ABOUT1 = about1Img;
+const ABOUT2 = about2Img;
 const DOCTOR = "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=200&q=80";
 
 const services = [
