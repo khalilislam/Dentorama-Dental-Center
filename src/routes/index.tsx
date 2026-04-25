@@ -5,9 +5,37 @@ import {
   Stethoscope, Award, Users, CheckCircle2, Quote, Compass,
 } from "lucide-react";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/Reveal";
+import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import heroDentists from "@/assets/hero-dentists.png";
 import about1Img from "@/assets/clinic-memmeri.png";
 import about2Img from "@/assets/clinic-tamendjari.png";
+import ba1Before from "@/assets/ba-1-before.jpg";
+import ba1After from "@/assets/ba-1-after.jpg";
+import ba2Before from "@/assets/ba-2-before.jpg";
+import ba2After from "@/assets/ba-2-after.jpg";
+import ba3Before from "@/assets/ba-3-before.jpg";
+import ba3After from "@/assets/ba-3-after.jpg";
+
+const beforeAfterCases = [
+  {
+    before: ba1Before,
+    after: ba1After,
+    title: "Réhabilitation prothétique complète",
+    desc: "Restauration d'un sourire affecté par la perte et la dégradation des dents antérieures grâce à une prothèse fixe esthétique, redonnant fonction, harmonie et confiance au patient.",
+  },
+  {
+    before: ba2Before,
+    after: ba2After,
+    title: "Soins conservateurs & couronnes esthétiques",
+    desc: "Traitement des caries multiples et reconstruction des dents abîmées avec des couronnes céramiques sur mesure pour un sourire naturel, propre et lumineux.",
+  },
+  {
+    before: ba3Before,
+    after: ba3After,
+    title: "Bridge dentaire & restauration du sourire",
+    desc: "Remplacement des dents manquantes et retrait des restaurations métalliques par un bridge moderne, offrant un alignement parfait et un résultat esthétique durable.",
+  },
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -251,6 +279,42 @@ function HomePage() {
               </StaggerItem>
             ))}
           </StaggerGroup>
+        </div>
+      </section>
+
+      {/* BEFORE / AFTER */}
+      <section className="py-24">
+        <div className="mx-auto max-w-7xl px-5 lg:px-8">
+          <Reveal className="text-center max-w-2xl mx-auto">
+            <p className="text-xs uppercase tracking-[0.25em] text-primary font-semibold">Before / After</p>
+            <h2 className="mt-3 text-3xl lg:text-4xl font-bold">Real smile transformations</h2>
+            <p className="mt-4 text-muted-foreground">
+              Glissez le curseur pour découvrir le résultat de nos traitements — des transformations réelles réalisées au sein de notre clinique.
+            </p>
+          </Reveal>
+
+          <div className="mt-14 grid gap-12 lg:gap-16">
+            {beforeAfterCases.map((c, i) => (
+              <Reveal key={c.title} delay={i * 0.1}>
+                <div className="grid lg:grid-cols-5 gap-8 items-center">
+                  <div className={`lg:col-span-3 ${i % 2 === 1 ? "lg:order-2" : ""}`}>
+                    <BeforeAfterSlider before={c.before} after={c.after} alt={c.title} />
+                  </div>
+                  <div className={`lg:col-span-2 ${i % 2 === 1 ? "lg:order-1" : ""}`}>
+                    <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
+                      Cas n°{i + 1}
+                    </span>
+                    <h3 className="mt-4 text-2xl lg:text-3xl font-bold leading-tight">{c.title}</h3>
+                    <p className="mt-4 text-muted-foreground leading-relaxed">{c.desc}</p>
+                    <div className="mt-6 flex flex-wrap items-center gap-4 text-sm">
+                      <span className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-primary" /> Résultat naturel</span>
+                      <span className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-primary" /> Soin personnalisé</span>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
