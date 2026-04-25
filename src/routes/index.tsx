@@ -167,7 +167,7 @@ function HomePage() {
               initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 1 }}
               className="absolute -bottom-6 left-4 flex items-center gap-3 rounded-2xl bg-card px-4 py-3 shadow-card"
             >
-              <img src={DOCTOR} alt="Dr. Memmeri" className="h-12 w-12 rounded-full object-cover" />
+              <img src={DOCTOR} alt="Dr. Memmeri" className="h-12 w-12 rounded-full object-cover border border-slate-50" />
               <div>
                 <p className="text-sm font-bold">Dr. Memmeri & Dr. Tamendjari</p>
                 <p className="text-xs text-muted-foreground">Founders</p>
