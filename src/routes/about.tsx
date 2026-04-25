@@ -111,7 +111,7 @@ function AboutPage() {
             ))}
           </StaggerGroup>
           <div className="mt-14 text-center">
-            <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-gradient-primary pl-6 pr-2 py-2.5 text-sm font-semibold text-primary-foreground shadow-soft hover:scale-105 transition-transform">
+            <Link to="/contact" className="cta-animated inline-flex items-center gap-2 rounded-full bg-gradient-primary pl-6 pr-2 py-2.5 text-sm font-semibold text-primary-foreground shadow-soft">
               Book A Visit
               <span className="grid h-9 w-9 place-items-center rounded-full bg-primary-foreground text-primary"><ArrowUpRight className="h-4 w-4" /></span>
             </Link>
