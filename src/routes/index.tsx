@@ -2,9 +2,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import {
   ArrowUpRight, Star, Phone, Clock, Sparkles, Shield, Smile, HeartPulse,
-  Stethoscope, Award, Users, CheckCircle2, Quote,
+  Stethoscope, Award, Users, CheckCircle2, Quote, Compass,
 } from "lucide-react";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/Reveal";
+import heroDentists from "@/assets/hero-dentists.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -19,7 +20,7 @@ export const Route = createFileRoute("/")({
   component: HomePage,
 });
 
-const HERO = "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=900&q=80";
+const HERO = heroDentists;
 const ABOUT1 = "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=700&q=80";
 const ABOUT2 = "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=700&q=80";
 const DOCTOR = "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=200&q=80";
@@ -79,12 +80,18 @@ function HomePage() {
 
             <motion.div
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }}
-              className="mt-8"
+              className="mt-8 flex flex-wrap items-center gap-3"
             >
               <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-gradient-primary pl-6 pr-2 py-2.5 text-sm font-semibold text-primary-foreground shadow-soft hover:scale-105 transition-transform">
                 Make An Appointment
                 <span className="grid h-9 w-9 place-items-center rounded-full bg-primary-foreground text-primary">
                   <ArrowUpRight className="h-4 w-4" />
+                </span>
+              </Link>
+              <Link to="/services" className="inline-flex items-center gap-2 rounded-full border-2 border-primary/30 bg-card/60 backdrop-blur pl-6 pr-2 py-2.5 text-sm font-semibold text-primary hover:border-primary hover:bg-card transition-colors">
+                Explore Our Site
+                <span className="grid h-9 w-9 place-items-center rounded-full bg-primary text-primary-foreground">
+                  <Compass className="h-4 w-4" />
                 </span>
               </Link>
             </motion.div>
