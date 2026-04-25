@@ -16,7 +16,6 @@ import ba2After from "@/assets/ba-2-after.jpg";
 import ba3Before from "@/assets/ba-3-before.jpg";
 import ba3After from "@/assets/ba-3-after.jpg";
 import doctorImg from "@/assets/doctor-portrait.png";
-import toothIcon from "@/assets/icon-hero-tooth.svg";
 
 const beforeAfterCases = [
   {
@@ -181,14 +180,14 @@ function HomePage() {
         <div className="bg-dark-section text-dark-section-foreground">
           <div className="mx-auto max-w-7xl px-5 lg:px-8 py-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-center">
             <div className="flex items-center gap-4">
-              <span className="grid h-12 w-12 place-items-center rounded-full bg-primary overflow-hidden"><img src="/placeholder.svg" alt="Phone" className="h-6 w-6 object-contain" /></span>
+              <span className="grid h-12 w-12 place-items-center rounded-full bg-primary"><Phone className="h-5 w-5" /></span>
               <div>
                 <p className="font-semibold">Need Dental Services?</p>
                 <p className="text-sm text-dark-section-foreground/70">Call: 06 72 68 09 13</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
-              <span className="grid h-12 w-12 place-items-center rounded-full bg-primary"><img src={toothIcon} alt="Tooth" className="h-6 w-6 object-contain" loading="lazy" width={512} height={512} /></span>
+              <span className="grid h-12 w-12 place-items-center rounded-full bg-primary"><Clock className="h-5 w-5" /></span>
               <div>
                 <p className="font-semibold">Opening Hours</p>
                 <p className="text-sm text-dark-section-foreground/70">Sam–Jeu 9h–22h · Ven 14h–20h</p>
