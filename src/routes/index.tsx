@@ -243,7 +243,7 @@ function HomePage() {
               ))}
             </StaggerGroup>
             <Reveal delay={0.3}>
-              <Link to="/about" className="mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-primary pl-5 pr-2 py-2 text-sm font-semibold text-primary-foreground shadow-soft hover:scale-105 transition-transform">
+              <Link to="/about" className="cta-animated mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-primary pl-5 pr-2 py-2 text-sm font-semibold text-primary-foreground shadow-soft">
                 Learn More
                 <span className="grid h-8 w-8 place-items-center rounded-full bg-primary-foreground text-primary"><ArrowUpRight className="h-4 w-4" /></span>
               </Link>
