@@ -113,13 +113,13 @@ function HomePage() {
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }}
               className="mt-8 flex flex-wrap items-center gap-3"
             >
-              <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-gradient-primary pl-6 pr-2 py-2.5 text-sm font-semibold text-primary-foreground shadow-soft hover:scale-105 transition-transform">
+              <Link to="/contact" className="cta-animated inline-flex items-center gap-2 rounded-full bg-gradient-primary pl-6 pr-2 py-2.5 text-sm font-semibold text-primary-foreground shadow-soft">
                 Make An Appointment
                 <span className="grid h-9 w-9 place-items-center rounded-full bg-primary-foreground text-primary">
                   <ArrowUpRight className="h-4 w-4" />
                 </span>
               </Link>
-              <Link to="/services" className="inline-flex items-center gap-2 rounded-full border-2 border-primary/30 bg-card/60 backdrop-blur pl-6 pr-2 py-2.5 text-sm font-semibold text-primary hover:border-primary hover:bg-card transition-colors">
+              <Link to="/services" className="cta-animated inline-flex items-center gap-2 rounded-full border-2 border-primary/30 bg-card/60 backdrop-blur pl-6 pr-2 py-2.5 text-sm font-semibold text-primary hover:border-primary hover:bg-card">
                 Explore Our Site
                 <span className="grid h-9 w-9 place-items-center rounded-full bg-primary text-primary-foreground">
                   <Compass className="h-4 w-4" />
@@ -193,7 +193,7 @@ function HomePage() {
                 <p className="text-sm text-dark-section-foreground/70">Sam–Jeu 9h–22h · Ven 14h–20h</p>
               </div>
             </div>
-            <Link to="/contact" className="justify-self-start lg:justify-self-end inline-flex items-center gap-2 rounded-full bg-gradient-primary pl-5 pr-2 py-2 text-sm font-semibold shadow-soft hover:scale-105 transition-transform">
+            <Link to="/contact" className="cta-animated justify-self-start lg:justify-self-end inline-flex items-center gap-2 rounded-full bg-gradient-primary pl-5 pr-2 py-2 text-sm font-semibold shadow-soft">
               Make An Appointment
               <span className="grid h-8 w-8 place-items-center rounded-full bg-primary-foreground text-primary"><ArrowUpRight className="h-4 w-4" /></span>
             </Link>
@@ -243,7 +243,7 @@ function HomePage() {
               ))}
             </StaggerGroup>
             <Reveal delay={0.3}>
-              <Link to="/about" className="mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-primary pl-5 pr-2 py-2 text-sm font-semibold text-primary-foreground shadow-soft hover:scale-105 transition-transform">
+              <Link to="/about" className="cta-animated mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-primary pl-5 pr-2 py-2 text-sm font-semibold text-primary-foreground shadow-soft">
                 Learn More
                 <span className="grid h-8 w-8 place-items-center rounded-full bg-primary-foreground text-primary"><ArrowUpRight className="h-4 w-4" /></span>
               </Link>
@@ -383,7 +383,7 @@ function HomePage() {
                 Ready to give your smile the care it deserves?
               </h2>
               <p className="mt-4 opacity-90 max-w-xl mx-auto">Book a consultation today and meet the team that puts your comfort first.</p>
-              <Link to="/contact" className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary-foreground pl-6 pr-2 py-2.5 text-sm font-semibold text-primary shadow-md hover:scale-105 transition-transform">
+              <Link to="/contact" className="cta-animated mt-8 inline-flex items-center gap-2 rounded-full bg-primary-foreground pl-6 pr-2 py-2.5 text-sm font-semibold text-primary shadow-md">
                 Book Appointment
                 <span className="grid h-9 w-9 place-items-center rounded-full bg-primary text-primary-foreground"><ArrowUpRight className="h-4 w-4" /></span>
               </Link>
